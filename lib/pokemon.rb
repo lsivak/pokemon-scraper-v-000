@@ -2,11 +2,11 @@ class Pokemon
   attr_accessor :id, :name, :type, :db
   @@all = []
 
-  def initialize(id, name, type, db=SQLite3::Database.new('db/pokemon.db'))
+  def initialize(id, name, type, db)
     @id = id
     @name = name
     @type = type
-    @db = db
+    @db = SQLite3::Database.new('db/pokemon.db')
 end
 
 def self.all
@@ -24,7 +24,7 @@ Pokemon.all.each do |pokemon|
 end
 binding.pry
 def self.find(id, db)
-  pokemon = db.execute("SELECT * FROM pokemon WHERE id = ?", id)
-  Pokemon.new(pokemon[0], pokemon[1], pokemon[2], db)
+  where_pokemon = db.execute("SELECT * FROM pokemon WHERE id = ?", id)
+  Pokemon.new(where_pokemon[0], where_pokemon[1], where_pokemon[2], db)
 end
 end
