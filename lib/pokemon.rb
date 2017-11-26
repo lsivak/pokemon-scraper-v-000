@@ -2,7 +2,7 @@ class Pokemon
   attr_accessor :id, :name, :type, :db
   @@all = []
 
-  def initialize(name, type, db=SQLite3::Database.new('db/pokemon.db'))
+  def initialize(id, name, type, db=SQLite3::Database.new('db/pokemon.db'))
     @id = id
     @name = name
     @type = type
