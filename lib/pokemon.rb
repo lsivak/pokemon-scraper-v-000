@@ -25,7 +25,7 @@ Pokemon.new(@id, "Pikachu", "electric", @db)
 
 def self.find(id, db)
   where_pokemon = db.execute("SELECT * FROM pokemon WHERE id = ?", id)
-  
+
 end
 
 end
