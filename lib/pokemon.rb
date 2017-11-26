@@ -3,7 +3,7 @@ class Pokemon
   attr_accessor :id, :name, :type, :db
 
 
-  def initialize(name, type, db)
+  def initialize(name, type, db= SQLite3::Database.new('db/pokemon.db'))
     @id = id
     @name = name
     @type = type
@@ -16,7 +16,7 @@ def self.save(name, type, db)
   db.execute("INSERT INTO pokemon(name, type) VALUES (?, ?)", name, type)
 end
 
-@db = SQLite3::Database.new('db/pokemon.db')
+
 self.new("Pikachu", "electric", @db)
 
 def self.find(id, db)
