@@ -20,7 +20,7 @@ db = SQLite3::Database.new('db/pokemon.db')
 pokemon = Pokemon.new("Pikachu", "electric")
 
 Pokemon.all.each do |pokemon|
-  Pokemon.save(pokemon.id, pokemon.name, pokemon.type, database_connection)
+  Pokemon.save(pokemon.id, pokemon.name, pokemon.type, db)
 end
 binding.pry
 def self.find(id, db)
