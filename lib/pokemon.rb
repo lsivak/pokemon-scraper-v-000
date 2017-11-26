@@ -6,7 +6,7 @@ class Pokemon
     @name = name
     @type = type
     @db = SQLite3::Database.new('db/pokemon.db')
-    
+
 end
 
 
