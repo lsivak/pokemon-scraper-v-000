@@ -20,7 +20,7 @@ end
 self.new("Pikachu", "electric", @db)
 
 def self.find(id, db)
-  @db.execute("SELECT * FROM pokemon WHERE id = ?", id)
+  db.execute("SELECT * FROM pokemon WHERE id = ?", id)
   pokemon = Pokemon.new(id: 1, name: "Pikachu", type: "electric", db: @db)
   # pokemon = Pokemon.new(where_pokemon[0], where_pokemon[1], where_pokemon[2], db)
 
