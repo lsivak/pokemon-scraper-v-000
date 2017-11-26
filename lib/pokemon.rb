@@ -31,5 +31,5 @@ def self.find(id, db)
 
 binding.pry
 end
-
+end
 end
