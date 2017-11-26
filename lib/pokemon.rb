@@ -17,13 +17,13 @@ def self.save(name, type, db)
 end
 
 
-self.new("Pikachu", "electric", @db)
+# self.new("Pikachu", "electric", @db)
 
 def self.find(id, db)
   where_pokemon = db.execute("SELECT * FROM pokemon WHERE id = ?", id)
   binding.pry
   # pokemon = Pokemon.new(id: 1, name: "Pikachu", type: "electric", db: @db)
-  Pokemon.new(id = where_pokemon[0], name = where_pokemon[1], type= where_pokemon[2], @db)
+  # Pokemon.new(id = where_pokemon[0], name = where_pokemon[1], type= where_pokemon[2], @db)
 
 
 end
