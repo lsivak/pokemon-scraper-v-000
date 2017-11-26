@@ -6,7 +6,7 @@ class Pokemon
     @id = id
     @name = name
     @type = type
-    @db = db
+    @db = SQLite3::Database.new('db/pokemon.db')
 end
 
 def self.all
@@ -16,7 +16,7 @@ end
 def self.save(name, type, db)
   db.execute("INSERT INTO pokemon(name, type) VALUES (?, ?)", name, type)
 end
-db = SQLite3::Database.new('db/pokemon.db')
+ 
 pokemon = Pokemon.new("Pikachu", "electric")
 
 Pokemon.all.each do |pokemon|
