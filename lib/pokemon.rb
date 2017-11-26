@@ -20,7 +20,6 @@ end
 # self.new("Pikachu", "electric", @db)
 
 def self.find(id, db)
-  id = ""
   where_pokemon = db.execute("SELECT id FROM pokemon WHERE id = ?", id)
 #  binding.pry
   # pokemon = Pokemon.new(id: 1, name: "Pikachu", type: "electric", db: @db)
