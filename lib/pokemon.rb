@@ -22,7 +22,7 @@ def self.save(name, type, db)
 end
 
 
-self.new(@id, "Pikachu", "electric", @db)
+pokemon = self.new(@id, "Pikachu", "electric", @db)
 
 def self.find(id, db)
   db.execute("SELECT * FROM pokemon WHERE id = ?", id)
