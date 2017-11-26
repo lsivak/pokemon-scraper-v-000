@@ -29,7 +29,7 @@ def self.find(id, db)
   pokemon = Pokemon.new(where_pokemon[0], where_pokemon[1], where_pokemon[2], @db = db)
 @id = pokemon[0]
  @name = pokemon[1]
-@value = pokemon[2] 
+@value = pokemon[2]
 binding.pry
 end
 
