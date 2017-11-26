@@ -2,7 +2,7 @@ class Pokemon
   attr_accessor :id, :name, :type, :db
   @@all = []
 
-  def initialize(name, type, db)
+  def initialize(name, type)
     @id = id
     @name = name
     @type = type
@@ -20,7 +20,7 @@ end
 pokemon = Pokemon.new("Pikachu", "electric")
 
 Pokemon.all.each do |pokemons|
-  Pokemon.save(pokemons.id, pokemon.name, pokemons.type)
+  Pokemon.save(id = pokemons.id, name = pokemon.name, type = pokemons.type)
 end
 
 def self.find(id, db)
