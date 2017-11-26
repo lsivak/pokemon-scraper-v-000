@@ -3,7 +3,7 @@ class Pokemon
   attr_accessor :id, :name, :type, :db
   @@all = []
 
-  def initialize(id = 1, name, type, db)
+  def initialize(id = nil, name, type, db)
     @id = id
     @name = name
     @type = type
@@ -22,7 +22,7 @@ def self.save(name, type, db)
 end
 
 
-self.new(1, "Pikachu", "electric", @db)
+self.new(id, "Pikachu", "electric", @db)
 
 def self.find(id, db)
   db.execute("SELECT * FROM pokemon WHERE id = ?", id)
