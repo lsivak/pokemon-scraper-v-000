@@ -16,7 +16,7 @@ end
 def self.save(name, type, db)
   db.execute("INSERT INTO pokemon(name, type) VALUES (?, ?)", name, type)
 end
- 
+
 pokemon = Pokemon.new("Pikachu", "electric")
 
 Pokemon.all.each do |pokemon|
