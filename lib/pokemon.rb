@@ -20,7 +20,7 @@ end
 pokemon = Pokemon.new("Pikachu", "electric")
 
 Pokemon.all.each do |pokemons|
-  pokemon=Pokemon.save(pokemons.id, pokemon.name, pokemons.type, db)
+  Pokemon.save(pokemons.id, pokemon.name, pokemons.type, db)
 end
 
 def self.find(id, db)
