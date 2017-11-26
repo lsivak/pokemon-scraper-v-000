@@ -19,7 +19,7 @@ end
 Pokemon.new("Pikachu", "electric", @db)
 
 Pokemon.all.each do |pokemons|
-  Pokemon.save(pokemons.id, pokemon.name, pokemons.type)
+  Pokemon.save(pokemon.name, pokemons.type)
   binding.pry
 end
 
