@@ -19,8 +19,8 @@ end
 
 pokemon = Pokemon.new("Pikachu", "electric")
 
-Pokemon.all.each do |pokemon|
-  Pokemon.save(pokemon.id, pokemon.name, pokemon.type, db)
+Pokemon.all.each do |pokemons|
+  pokemon=Pokemon.save(pokemons.id, pokemon.name, pokemons.type, db)
 end
 binding.pry
 def self.find(id, db)
