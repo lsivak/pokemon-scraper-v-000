@@ -17,10 +17,10 @@ def self.save(name, type, db)
   db.execute("INSERT INTO pokemon(name, type) VALUES (?, ?)", name, type)
 end
 
-pokemon = Pokemon.new("Pikachu", "electric", db)
+pokemon = Pokemon.new("Pikachu", "electric")
 
 Pokemon.all.each do |pokemons|
-  Pokemon.save(pokemons.id, pokemon.name, pokemons.type, db)
+  Pokemon.save(pokemons.id, pokemon.name, pokemons.type)
 end
 
 def self.find(id, db)
