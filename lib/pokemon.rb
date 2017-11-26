@@ -20,7 +20,7 @@ end
 # self.new("Pikachu", "electric", @db)
 
 def self.find(id, db)
-  where_pokemon = db.execute("SELECT id FROM pokemon WHERE id = id").flatten
+  where_pokemon = db.execute("SELECT * FROM pokemon WHERE id = id").flatten
   Pokemon.new(id: where_pokemon[0], name: where_pokemon[1], type: where_pokemon[2], db: db)
   # db.execute("SELECT id FROM pokemon WHERE id =?", id)
   #binding.pry
