@@ -26,7 +26,7 @@ Pokemon.new(@id, "Pikachu", "electric", @db)
 
 def self.find(id, db)
   where_pokemon = db.execute("SELECT id FROM pokemon WHERE id = ?", id)
-where_pokemon
+id
 binding.pry
 end
 
