@@ -27,7 +27,7 @@ Pokemon.new(@id, "Pikachu", "electric", @db)
 def self.find(id, db)
   Pokemon.all.each do |poke|
   db.execute("SELECT * FROM pokemon WHERE id = ?", @id = id)
-  pokemon = Pokemon.new(@id = poke[0], @name = poke[1], @type = poke[2], db)
+  pokemon = Pokemon.new(@id = poke[0], @name = poke[1], @type = poke[2], @db = db)
 
 binding.pry
 end
